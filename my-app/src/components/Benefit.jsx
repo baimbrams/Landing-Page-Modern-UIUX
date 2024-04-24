@@ -1,11 +1,11 @@
 import { benefits } from "../constants";
-import ClipPath from "../assets/svg/ClipPath";
-import Arrow from "../assets/svg/Arrow";
 import Heading from "./Heading";
 import Section from "./Section";
+import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefit";
+import ClipPath from "../assets/svg/ClipPath";
 
-const Benefit = () => {
+const Benefits = () => {
   return (
     <Section id="features">
       <div className="container relative z-2">
@@ -13,7 +13,8 @@ const Benefit = () => {
           className="md:max-w-md lg:max-w-2xl"
           title="Chat Smarter, Not Harder with Brainwave"
         />
-        <div className="flex flex-wrap mb-10 gap-10">
+
+        <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
@@ -33,12 +34,14 @@ const Benefit = () => {
                     alt={item.title}
                   />
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    explore more
+                    Explore more
                   </p>
                   <Arrow />
                 </div>
               </div>
+
               {item.light && <GradientLight />}
+
               <div
                 className="absolute inset-0.5 bg-n-8"
                 style={{ clipPath: "url(#benefits)" }}
@@ -55,6 +58,7 @@ const Benefit = () => {
                   )}
                 </div>
               </div>
+
               <ClipPath />
             </div>
           ))}
@@ -64,4 +68,4 @@ const Benefit = () => {
   );
 };
 
-export default Benefit;
+export default Benefits;
