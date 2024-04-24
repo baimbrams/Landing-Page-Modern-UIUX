@@ -2,10 +2,14 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
+  "builds" : [
+    {"src":"vite.config.js","use":"@vercel/static-build"}
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "vercel-build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
